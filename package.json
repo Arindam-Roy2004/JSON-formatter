@@ -13,10 +13,10 @@
 		"format": "prettier --write 'src/**/*.ts' '*.json' '*.js'",
 		"format:check": "prettier --check 'src/**/*.ts' '*.json' '*.js'"
 	},
-	"author": "Arindam Roy (https://github.com/arindamroy)",
+	"author": "Arindam Roy (https://github.com/Arindam-Roy2004)",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/arindamroy/simple-json-formatter"
+		"url": "https://github.com/Arindam-Roy2004/JSON-formatter"
 	},
 	"license": "MIT",
 	"packageManager": "pnpm@10.14.0",

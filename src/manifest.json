@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "Auto-formats JSON pages with syntax highlighting, collapsible trees, and per-field copy. Supports light/dark mode.",
   "author": "Arindam Roy",
-  "homepage_url": "https://github.com/arindamroy/simple-json-formatter",
+  "homepage_url": "https://github.com/Arindam-Roy2004/JSON-formatter",
   "icons": {
     "16": "icon-16.png",
     "32": "icon-32.png",

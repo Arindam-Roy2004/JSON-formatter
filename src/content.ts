@@ -238,7 +238,7 @@ function render(parsed: JsonValue, rawText: string): void {
 	const githubLink = document.createElement('a')
 	githubLink.className = 'sjf-btn'
 	githubLink.textContent = 'GitHub'
-	githubLink.href = 'https://github.com/arindamroy/simple-json-formatter'
+	githubLink.href = 'https://github.com/Arindam-Roy2004/JSON-formatter'
 	githubLink.target = '_blank'
 	githubLink.rel = 'noopener noreferrer'
 

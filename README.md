@@ -15,7 +15,7 @@ A super lightweight, totally magical Chrome extension that automatically takes t
 
 ## How to get it on your machine 🛠️
 
-**[Check it out on my GitHub!](https://github.com/arindamroy/simple-json-formatter)**
+**[Check it out on my GitHub!](https://github.com/Arindam-Roy2004/JSON-formatter)**
 
 If you want to build it yourself, roll up your sleeves:
 
@@ -52,4 +52,4 @@ out/                  # Where the final build lives. This is what Chrome actuall
 
 ## License 📜
 
-MIT — Crafted with ❤️ by [Arindam Roy](https://github.com/arindamroy)
+MIT — Crafted with ❤️ by [Arindam Roy](https://github.com/Arindam-Roy2004)
