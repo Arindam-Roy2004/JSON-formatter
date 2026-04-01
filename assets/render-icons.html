@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { margin: 0; background: transparent; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+const size = parseInt(new URLSearchParams(location.search).get('size') || '128');
+const c = document.getElementById('c');
+c.width = size;
+c.height = size;
+const ctx = c.getContext('2d');
+
+const r = size / 128; // scale factor
+
+// A much cooler gradient background (Deep Midnight to Bright Indigo!)
+const grad = ctx.createLinearGradient(0, 0, size, size);
+grad.addColorStop(0, '#0f172a');
+grad.addColorStop(1, '#312e81');
+roundRect(ctx, 0, 0, size, size, 24 * r);
+ctx.fillStyle = grad;
+ctx.fill();
+
+// Colorful Braces (Matching our new JetBrains Mono vibe)
+ctx.textBaseline = 'middle';
+ctx.textAlign = 'center';
+const braceSize = Math.round(72 * r);
+ctx.font = `bold ${braceSize}px "JetBrains Mono", monospace`;
+
+// Left Brace — Neon Cyan Magic
+ctx.fillStyle = '#22d3ee';
+ctx.fillText('{', 34 * r, 64 * r);
+
+// Right Brace — Hot Pink Energy
+ctx.fillStyle = '#f472b6';
+ctx.fillText('}', 94 * r, 64 * r);
+
+// Let's paint some cute horizontal code-formatting lines instead of boring dots!
+const lines = [
+  { y: 40, w: 24, color: '#a3e635' }, // Greenish string line
+  { y: 60, w: 14, color: '#fbbf24' }, // Yellowish number line
+  { y: 80, w: 20, color: '#c084fc' }, // Purplish boolean line
+];
+
+lines.forEach(l => {
+  ctx.beginPath();
+  // We draw pretty rounded code lines here!
+  roundRect(ctx, 50 * r, l.y * r, l.w * r, 8 * r, 4 * r);
+  ctx.fillStyle = l.color;
+  ctx.fill();
+});
+
+function roundRect(ctx, x, y, w, h, radius) {
+  ctx.beginPath();
+  ctx.moveTo(x + radius, y);
+  ctx.lineTo(x + w - radius, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + radius);
+  ctx.lineTo(x + w, y + h - radius);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - radius, y + h);
+  ctx.lineTo(x + radius, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - radius);
+  ctx.lineTo(x, y + radius);
+  ctx.quadraticCurveTo(x, y, x + radius, y);
+  ctx.closePath();
+}
+
+// Signal ready
+document.title = 'ready';
+</script>
+</body>
+</html>
